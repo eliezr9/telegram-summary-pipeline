@@ -1,0 +1,12 @@
+[Unit]
+Description=Telegram Summary Daily Pipeline
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=%i
+WorkingDirectory=%h/telegram-summary-public
+ExecStart=%h/telegram-summary-public/app/run_daily_pipeline.sh
+StandardOutput=append:%h/telegram-summary-public/logs/daily_pipeline.log
+StandardError=append:%h/telegram-summary-public/logs/daily_pipeline.log
