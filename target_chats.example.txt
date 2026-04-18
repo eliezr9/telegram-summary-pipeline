@@ -1,3 +1,0 @@
-# One Telegram chat/channel ID per line
-# Example:
-# -1001234567890
